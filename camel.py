@@ -11,10 +11,16 @@ def display():
 
 display()
 
-def camelCase():
+def main():
     sentence = input("Enter your sentence : ")
+    camel = camelCase(sentence)
+    print(camel)
+    
+
+# Function with data passed in as argument, data output as return value. You can write a test for this. 
+def camelCase(sentence):    
     capital = string.capwords(sentence).replace(" ", "")
     camel = capital[0].lower() + capital[1:]
-    print(camel)
+    return camel
 
-camelCase()
+main()
